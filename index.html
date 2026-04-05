@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#ea1d2c">
+<title>Proposta Comercial — Osasco Express × Pastel da Drica</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#ea1d2c;--red-dark:#c51622;--red-soft:#fff0f1;
+  --bg:#f5f5f7;--white:#ffffff;--text:#0d0d0d;--text-mid:#3a3a3c;
+  --text-secondary:#6e6e73;--border:#e2e2e7;--green:#00875a;
+  --green-soft:rgba(0,135,90,0.08);--blue:#1a73e8;--blue-soft:rgba(26,115,232,0.08);
+  --gold:#b8860b;--gold-soft:#fff8e1;
+  --shadow-sm:0 1px 3px rgba(0,0,0,0.06);--shadow-md:0 4px 16px rgba(0,0,0,0.08);
+  --radius:16px;--radius-sm:10px;--radius-xs:6px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;}
+h1,h2,h3{font-family:'Sora',sans-serif;}
+a{text-decoration:none;}
+.container{max-width:980px;margin:0 auto;padding:0 24px;}
+section{padding:72px 0;}
+.divider{height:1px;background:var(--border);}
+#progress-bar{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--red),#ff6b74);z-index:999;transition:width .1s linear;}
+.sec-kicker{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:12px;}
+.sec-kicker::before{content:'';width:16px;height:2px;background:var(--red);border-radius:2px;display:inline-block;}
+.sec-header{margin-bottom:40px;}
+.sec-header h2{font-size:clamp(24px,3.5vw,36px);font-weight:800;letter-spacing:-.025em;color:var(--text);line-height:1.15;}
+.sec-header h2 em{font-style:normal;color:var(--red);}
+.sec-header p{font-size:15px;color:var(--text-secondary);margin-top:12px;max-width:560px;line-height:1.65;}
+.callout{border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:16px 20px;font-size:14px;line-height:1.65;border-left:3px solid var(--red);background:var(--red-soft);color:var(--text-mid);}
+.callout strong{color:var(--text);}
+.callout.green{border-left-color:var(--green);background:var(--green-soft);}
+.callout.gold{border-left-color:var(--gold);background:var(--gold-soft);}
+.callout.blue{border-left-color:var(--blue);background:var(--blue-soft);}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.fade-in{opacity:0;}
+.fade-in.visible{animation:fadeInUp .5s ease forwards;}
+
+/* ── BOAS-VINDAS ── */
+.bv-wrap{background:linear-gradient(135deg,#0d0d0d 0%,#1a1a2e 100%);padding:0;overflow:hidden;}
+.bv-inner{max-width:980px;margin:0 auto;padding:56px 24px 52px;position:relative;}
+.bv-glow{position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(234,29,44,.12) 0%,transparent 65%);pointer-events:none;}
+.bv-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(234,29,44,.15);border:1px solid rgba(234,29,44,.3);padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;color:#ff6b74;letter-spacing:.07em;text-transform:uppercase;margin-bottom:24px;}
+.bv-badge-dot{width:6px;height:6px;border-radius:50%;background:#ff6b74;animation:blink 1.2s infinite;}
+.bv-title{font-family:'Sora',sans-serif;font-size:clamp(28px,4vw,46px);font-weight:900;color:white;letter-spacing:-.03em;line-height:1.08;margin-bottom:18px;}
+.bv-title em{font-style:normal;color:#ff6b74;}
+.bv-lead{font-size:16px;color:rgba(255,255,255,.65);line-height:1.75;max-width:580px;margin-bottom:32px;}
+.bv-lead strong{color:rgba(255,255,255,.9);}
+.bv-info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:32px;}
+.bv-info-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-sm);padding:16px 18px;}
+.bv-info-icon{font-size:20px;margin-bottom:8px;}
+.bv-info-label{font-size:10px;font-weight:700;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;}
+.bv-info-val{font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:white;line-height:1.3;}
+.bv-msg{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-sm);padding:22px 24px;font-size:14px;color:rgba(255,255,255,.75);line-height:1.8;max-width:640px;}
+.bv-msg strong{color:white;}
+.bv-msg em{font-style:normal;color:#4ade80;}
+
+/* NAV */
+nav{background:rgba(255,255,255,.94);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:200;transition:box-shadow .2s;}
+nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08);}
+.nav-inner{max-width:980px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px;}
+.nav-logo{display:flex;align-items:center;gap:10px;font-family:'Sora',sans-serif;font-weight:800;font-size:15px;color:var(--text);white-space:nowrap;flex-shrink:0;}
+.nav-logo-mark{width:32px;height:32px;border-radius:9px;background:var(--red);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(234,29,44,.3);}
+.nav-logo-mark svg{width:17px;height:17px;}
+.nav-right{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.nav-tag{font-size:11px;color:var(--text-secondary);background:var(--bg);padding:4px 10px;border-radius:20px;border:1px solid var(--border);white-space:nowrap;}
+.nav-cta{background:var(--red);color:var(--white);font-family:'Sora',sans-serif;font-weight:700;font-size:13px;padding:9px 20px;border-radius:20px;border:none;cursor:pointer;transition:all .15s;text-decoration:none;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;box-shadow:0 2px 10px rgba(234,29,44,.25);}
+.nav-cta:hover{background:var(--red-dark);transform:translateY(-1px);}
+
+/* ÂNCORAS */
+.nav-anchors-bar{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:64px;z-index:199;overflow-x:auto;scrollbar-width:none;}
+.nav-anchors-bar::-webkit-scrollbar{display:none;}
+.nav-anchors-inner{max-width:980px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:2px;height:44px;}
+.nav-anchor{font-family:'Sora',sans-serif;font-size:12px;font-weight:600;color:var(--text-secondary);background:none;border:none;padding:6px 14px;border-radius:20px;cursor:pointer;transition:all .15s;white-space:nowrap;}
+.nav-anchor:hover{color:var(--text);background:var(--bg);}
+.nav-anchor.active{color:var(--red);background:var(--red-soft);font-weight:700;}
+
+/* HERO */
+.hero{background:var(--white);border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
+.hero-glow{position:absolute;top:-120px;right:-120px;width:600px;height:600px;background:radial-gradient(circle,rgba(234,29,44,.05) 0%,transparent 65%);pointer-events:none;}
+.hero-inner{padding:80px 0 72px;position:relative;z-index:1;}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;background:var(--red-soft);border:1px solid rgba(234,29,44,.2);padding:6px 14px;border-radius:20px;font-size:11px;font-weight:700;color:var(--red);letter-spacing:.06em;text-transform:uppercase;margin-bottom:24px;}
+.hero-kicker-dot{width:6px;height:6px;border-radius:50%;background:var(--red);animation:pulse 2s infinite;}
+.hero h1{font-size:clamp(30px,5vw,56px);font-weight:900;line-height:1.06;letter-spacing:-.03em;color:var(--text);margin-bottom:18px;}
+.hero h1 em{font-style:normal;color:var(--red);}
+.hero-lead{font-size:16px;color:var(--text-mid);line-height:1.7;max-width:540px;margin-bottom:16px;}
+.hero-growth{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid rgba(0,135,90,.2);border-radius:var(--radius-sm);padding:12px 18px;margin-bottom:32px;}
+.hero-growth-icon{width:36px;height:36px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;}
+.hero-growth-text{font-size:13px;color:#166534;line-height:1.5;}
+.hero-growth-text strong{font-weight:700;display:block;font-size:14px;}
+.hero-cta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:52px;}
+.btn-primary{display:inline-flex;align-items:center;gap:9px;background:var(--red);color:var(--white);font-family:'Sora',sans-serif;font-weight:700;font-size:16px;padding:16px 32px;border-radius:50px;border:none;cursor:pointer;transition:all .2s;box-shadow:0 4px 20px rgba(234,29,44,.3);text-decoration:none;}
+.btn-primary:hover{background:var(--red-dark);transform:translateY(-2px);}
+.hero-note{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--text-secondary);}
+.hero-note-dot{width:5px;height:5px;border-radius:50%;background:var(--green);flex-shrink:0;}
+
+/* STATS HERO */
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.hero-stat-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;transition:transform .2s,box-shadow .2s;}
+.hero-stat-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);}
+.hero-stat-card.red{background:var(--red-soft);border-color:rgba(234,29,44,.18);}
+.hsc-val{font-family:'Sora',sans-serif;font-size:28px;font-weight:900;color:var(--text);line-height:1;letter-spacing:-.02em;}
+.hero-stat-card.red .hsc-val{color:var(--red);}
+.hsc-label{font-size:12px;color:var(--text-secondary);margin-top:6px;line-height:1.4;}
+.hsc-trend{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:var(--green);background:rgba(0,135,90,.08);padding:2px 7px;border-radius:10px;margin-top:8px;}
+.hero-parties{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap;}
+.party-chip{font-size:11px;color:var(--text-secondary);background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:8px 14px;line-height:1.5;}
+.party-chip strong{display:block;font-size:11px;color:var(--text-mid);font-weight:700;margin-bottom:2px;letter-spacing:.04em;text-transform:uppercase;}
+
+/* DADOS REAIS BLOCO */
+.dados-reais-wrap{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);margin-bottom:20px;}
+.dados-reais-head{background:var(--text);padding:18px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.dados-reais-title{font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:white;}
+.dados-reais-sub{font-size:12px;color:rgba(255,255,255,.5);margin-top:2px;}
+.dados-reais-period{font-size:11px;font-weight:700;color:#4ade80;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.2);padding:4px 12px;border-radius:20px;}
+.dados-reais-grid{display:grid;grid-template-columns:repeat(4,1fr);}
+.dr-col{padding:20px 22px;border-right:1px solid var(--border);text-align:center;}
+.dr-col:last-child{border-right:none;}
+.dr-val{font-family:'Sora',sans-serif;font-size:26px;font-weight:900;color:var(--text);line-height:1;}
+.dr-val.red{color:var(--red);}
+.dr-val.green{color:var(--green);}
+.dr-label{font-size:11px;color:var(--text-secondary);margin-top:5px;line-height:1.4;font-weight:500;}
+.dr-note{font-size:10px;color:var(--text-secondary);margin-top:3px;opacity:.7;}
+
+/* CHART */
+.chart-wrap{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);}
+.chart-head{padding:20px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.chart-title{font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:var(--text);}
+.chart-meta{font-size:12px;color:var(--text-secondary);margin-top:3px;}
+.chart-tabs{display:flex;gap:6px;}
+.ctab{padding:7px 16px;border-radius:20px;font-size:12px;font-weight:700;cursor:pointer;border:1px solid var(--border);background:var(--white);color:var(--text-secondary);transition:all .15s;font-family:'Sora',sans-serif;}
+.ctab.ab{background:var(--blue);color:#fff;border-color:var(--blue);}
+.ctab.ar{background:var(--red);color:#fff;border-color:var(--red);}
+.chart-body{padding:24px 28px;display:flex;flex-direction:column;gap:10px;}
+.chart-panel{display:none;}
+.chart-panel.active{display:flex;flex-direction:column;gap:10px;}
+.chart-row{display:grid;grid-template-columns:70px 1fr 160px;align-items:center;gap:14px;}
+.chart-hour{font-family:'Sora',sans-serif;font-size:12px;font-weight:700;color:var(--text);text-align:right;}
+.bar-track{height:38px;background:var(--bg);border-radius:8px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:8px;display:flex;align-items:center;padding:0 12px;font-size:12px;font-weight:600;width:0%;transition:width 1.2s cubic-bezier(.4,0,.2,1);white-space:nowrap;overflow:hidden;}
+.bar-fill.c0{background:#f0f0f3;color:#9e9e9e;}
+.bar-fill.c1{background:#dbeafe;color:#1d4ed8;}
+.bar-fill.c4{background:var(--red);color:#fff;}
+.bar-fill.c5{background:#fca5a5;color:#991b1b;}
+.chart-right{font-size:12px;color:var(--text-secondary);text-align:right;line-height:1.45;}
+.chart-right strong{color:var(--text);font-family:'Sora',sans-serif;}
+.chart-right.peak{color:var(--red);font-weight:700;}
+.chart-right .real-badge{display:inline-block;font-size:9px;font-weight:700;background:rgba(0,135,90,.1);color:var(--green);padding:1px 6px;border-radius:6px;margin-left:4px;}
+.pico-destaque{background:linear-gradient(135deg,#fff5f5,#fff0f1);border:1px solid rgba(234,29,44,.15);border-radius:var(--radius-sm);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:8px;}
+.pico-dot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:pulse 1.5s infinite;flex-shrink:0;}
+.pico-destaque-label{font-size:13px;color:var(--text-mid);display:flex;align-items:center;gap:8px;}
+.pico-destaque-val{font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:var(--red);background:var(--red-soft);border:1px solid rgba(234,29,44,.2);padding:4px 12px;border-radius:20px;}
+
+/* VOLUME POR DIA */
+.dias-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;}
+.dia-col{text-align:center;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 8px;transition:transform .15s;}
+.dia-col:hover{transform:translateY(-2px);}
+.dia-col.pico-dia{background:var(--red-soft);border-color:rgba(234,29,44,.25);}
+.dia-col.pico-max{background:var(--red);border-color:var(--red);}
+.dia-num{font-family:'Sora',sans-serif;font-weight:900;color:var(--text);line-height:1;}
+.dia-col.pico-dia .dia-num{color:var(--red);}
+.dia-col.pico-max .dia-num{color:white;font-size:26px;}
+.dia-label{font-size:10px;margin-top:4px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--text-secondary);}
+.dia-col.pico-dia .dia-label{color:var(--red);}
+.dia-col.pico-max .dia-label{color:rgba(255,255,255,.8);}
+.dia-media{font-size:9px;color:var(--text-secondary);margin-top:3px;}
+.dia-col.pico-max .dia-media{color:rgba(255,255,255,.6);}
+.dia-badge{font-size:9px;font-weight:700;color:var(--red);background:var(--red-soft);padding:2px 6px;border-radius:8px;margin-top:4px;display:inline-block;}
+.dia-col.pico-max .dia-badge{background:rgba(255,255,255,.2);color:white;}
+
+/* ESCALA */
+.escala-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.escala-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);}
+.escala-head{padding:16px 22px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border);}
+.escala-head.blue{background:var(--blue-soft);}
+.escala-head.red{background:var(--red-soft);}
+.escala-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
+.escala-dot.blue{background:var(--blue);}
+.escala-dot.red{background:var(--red);}
+.escala-head-info{flex:1;}
+.escala-head-title{font-family:'Sora',sans-serif;font-size:14px;font-weight:800;}
+.escala-head-title.blue{color:var(--blue);}
+.escala-head-title.red{color:var(--red);}
+.escala-head-vol{font-size:11px;color:var(--text-secondary);margin-top:2px;}
+.escala-head-badge{font-size:10px;font-weight:700;padding:3px 9px;border-radius:10px;letter-spacing:.04em;text-transform:uppercase;}
+.escala-head-badge.blue{background:var(--blue);color:white;}
+.escala-head-badge.red{background:var(--red);color:white;}
+.erow{display:grid;grid-template-columns:110px 1fr auto;align-items:center;gap:12px;padding:14px 22px;border-bottom:1px solid var(--border);transition:background .15s;}
+.erow:last-child{border-bottom:none;}
+.erow:hover{background:var(--bg);}
+.erow.pico{background:#fff8f8;}
+.erow.pico-forte{background:var(--red);}
+.erow.pico-forte:hover{background:var(--red-dark);}
+.erow-hora{font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:var(--text);}
+.erow.pico .erow-hora{color:var(--red);}
+.erow.pico-forte .erow-hora{color:rgba(255,255,255,.95);}
+.erow-sub{font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--text-secondary);margin-top:2px;}
+.erow.pico .erow-sub{color:rgba(234,29,44,.7);}
+.erow.pico-forte .erow-sub{color:rgba(255,255,255,.6);}
+.erow-info{font-size:12px;color:var(--text-secondary);line-height:1.45;}
+.erow.pico .erow-info{color:#c00;}
+.erow.pico-forte .erow-info{color:rgba(255,255,255,.8);}
+.erow-num{font-family:'Sora',sans-serif;font-size:24px;font-weight:900;color:var(--text);text-align:right;white-space:nowrap;line-height:1;}
+.erow-num small{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:400;color:var(--text-secondary);display:block;margin-top:3px;}
+.erow.pico .erow-num{color:var(--red);}
+.erow.pico-forte .erow-num{color:#fff;}
+.erow.pico-forte .erow-num small{color:rgba(255,255,255,.6);}
+
+/* PLANOS */
+.planos-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.plano-card{background:var(--white);border:2px solid var(--border);border-radius:var(--radius);padding:24px 16px;text-align:center;transition:all .2s;position:relative;overflow:hidden;}
+.plano-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.plano-card.rec{border-color:var(--red);background:var(--red-soft);transform:translateY(-6px);box-shadow:0 8px 28px rgba(234,29,44,.18);}
+.plano-card.gold-plan{border-color:var(--gold);background:var(--gold-soft);}
+.plano-rec-badge{display:inline-block;font-size:9px;font-weight:700;background:var(--red);color:var(--white);padding:3px 10px;border-radius:10px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+.plano-gold-badge{display:inline-block;font-size:9px;font-weight:700;background:var(--gold);color:var(--white);padding:3px 10px;border-radius:10px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;}
+.plano-nome{font-family:'Sora',sans-serif;font-size:12px;font-weight:700;color:var(--text-secondary);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;}
+.plano-card.rec .plano-nome{color:var(--red);}
+.plano-val{font-family:'Sora',sans-serif;font-size:28px;font-weight:900;color:var(--text);line-height:1;letter-spacing:-.02em;}
+.plano-card.rec .plano-val{color:var(--red);}
+.plano-card.gold-plan .plano-val{color:var(--gold);}
+.plano-mes{font-size:12px;color:var(--text-secondary);margin-top:3px;}
+.plano-limite{font-size:11px;color:var(--text-secondary);margin:10px 0;padding:5px 10px;background:rgba(0,0,0,.04);border-radius:20px;display:inline-block;}
+.plano-card.rec .plano-limite{background:rgba(234,29,44,.1);color:var(--red);}
+.plano-items{list-style:none;text-align:left;margin-top:14px;display:flex;flex-direction:column;gap:7px;}
+.plano-items li{font-size:12px;color:var(--text-secondary);display:flex;align-items:flex-start;gap:7px;line-height:1.4;}
+.plano-items li::before{content:'✓';color:var(--green);font-weight:700;font-size:11px;margin-top:1px;flex-shrink:0;}
+.plano-card.rec .plano-items li{color:var(--text-mid);}
+.plano-por-pedido{margin-top:12px;font-size:11px;font-weight:700;color:var(--green);background:var(--green-soft);padding:3px 9px;border-radius:10px;display:inline-block;}
+
+/* BÔNUS */
+.bonus-wrap{background:linear-gradient(135deg,#0d0d0d 0%,#1a1a2e 100%);border-radius:var(--radius);padding:44px;color:white;position:relative;overflow:hidden;margin-top:24px;}
+.bonus-wrap::before{content:'';position:absolute;top:-80px;right:-80px;width:320px;height:320px;border-radius:50%;background:rgba(184,134,11,.06);pointer-events:none;}
+.bonus-kicker{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.bonus-title{font-family:'Sora',sans-serif;font-size:clamp(20px,3vw,28px);font-weight:900;color:white;margin-bottom:10px;letter-spacing:-.02em;}
+.bonus-desc{font-size:14px;color:rgba(255,255,255,.65);line-height:1.7;max-width:480px;margin-bottom:28px;}
+.bonus-desc strong{color:rgba(255,255,255,.9);}
+.bonus-layout{display:grid;grid-template-columns:1fr 260px;gap:36px;align-items:start;}
+.bonus-items{display:flex;flex-direction:column;gap:10px;}
+.bonus-item{display:flex;align-items:flex-start;gap:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-sm);padding:14px 16px;}
+.bonus-item-icon{font-size:20px;flex-shrink:0;margin-top:1px;}
+.bonus-item-title{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;color:white;margin-bottom:3px;}
+.bonus-item-desc{font-size:12px;color:rgba(255,255,255,.55);line-height:1.5;}
+.bonus-valor{background:rgba(184,134,11,.12);border:1px solid rgba(184,134,11,.25);border-radius:var(--radius-sm);padding:20px;text-align:center;margin-top:14px;}
+.bonus-valor-label{font-size:11px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;}
+.bonus-valor-num{font-family:'Sora',sans-serif;font-size:26px;font-weight:900;color:white;text-decoration:line-through;opacity:.4;}
+.bonus-valor-gratis{font-family:'Sora',sans-serif;font-size:22px;font-weight:900;color:#4ade80;margin-top:4px;}
+.bonus-valor-sub{font-size:11px;color:rgba(255,255,255,.4);margin-top:6px;line-height:1.5;}
+
+/* MOCKUP */
+.phone-mockup{flex-shrink:0;display:flex;justify-content:center;}
+.phone-frame{width:210px;background:#0d0d0d;border-radius:34px;padding:9px;box-shadow:0 20px 60px rgba(0,0,0,.5),0 0 0 2px rgba(255,255,255,.08);}
+.phone-notch{width:70px;height:18px;background:#0d0d0d;border-radius:0 0 12px 12px;margin:0 auto 5px;}
+.phone-screen{background:#fff;border-radius:26px;overflow:hidden;}
+.phone-status{background:#fff;padding:7px 14px 3px;display:flex;justify-content:space-between;}
+.phone-status-time{font-size:10px;font-weight:700;color:#0d0d0d;}
+.ifood-header{background:#ea1d2c;padding:9px 12px 7px;display:flex;align-items:center;gap:7px;}
+.ifood-back{color:white;font-size:13px;font-weight:700;}
+.ifood-header-title{font-family:'Sora',sans-serif;font-size:10px;font-weight:700;color:white;flex:1;}
+.store-banner{background:linear-gradient(135deg,#ff6b00,#ea1d2c);height:60px;display:flex;align-items:flex-end;padding:7px 11px;}
+.store-banner-name{font-family:'Sora',sans-serif;font-size:12px;font-weight:800;color:white;}
+.store-info-bar{background:white;padding:7px 11px;display:flex;gap:7px;border-bottom:1px solid #f0f0f0;font-size:8px;color:#3E3E3E;}
+.ifood-category{padding:7px 11px 3px;font-family:'Sora',sans-serif;font-size:9px;font-weight:800;color:#3E3E3E;}
+.ifood-product{display:flex;gap:7px;padding:7px 11px;border-bottom:1px solid #f5f5f5;}
+.ifood-product-img{width:46px;height:46px;background:linear-gradient(135deg,#ff9500,#ff6b00);border-radius:7px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.ifood-product-info{flex:1;min-width:0;}
+.ifood-product-name{font-family:'Sora',sans-serif;font-size:9px;font-weight:700;color:#3E3E3E;line-height:1.3;margin-bottom:2px;position:relative;}
+.ifood-product-desc{font-size:7px;color:#9E9E9E;line-height:1.4;margin-bottom:3px;}
+.ifood-product-price{font-family:'Sora',sans-serif;font-size:10px;font-weight:800;color:#ea1d2c;}
+.ifood-add-btn{width:20px;height:20px;background:#ea1d2c;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:13px;font-weight:700;flex-shrink:0;align-self:flex-end;}
+.seo-badge{position:absolute;top:-4px;right:-4px;background:#4ade80;color:#0d0d0d;font-size:6px;font-weight:800;padding:1px 5px;border-radius:8px;}
+
+/* TAXAS */
+.taxa-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.taxa-block{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);}
+.taxa-head{padding:16px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;}
+.taxa-head.blue{background:var(--blue-soft);}
+.taxa-head.red{background:var(--red-soft);}
+.taxa-head-info{flex:1;}
+.taxa-head-label{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;}
+.taxa-head-label.blue{color:var(--blue);}
+.taxa-head-label.red{color:var(--red);}
+.taxa-head-dias{font-size:11px;color:var(--text-secondary);margin-top:2px;}
+.taxa-row{display:flex;justify-content:space-between;align-items:center;padding:12px 22px;border-bottom:1px solid var(--border);font-size:14px;transition:background .12s;}
+.taxa-row:last-child{border-bottom:none;}
+.taxa-row:hover{background:var(--bg);}
+.taxa-row.popular{background:#f0fdf4;}
+.taxa-row.popular .taxa-km{color:#166534;}
+.taxa-row.popular::after{content:'Mais comum';font-size:10px;font-weight:700;background:#dcfce7;color:#166534;padding:2px 8px;border-radius:10px;}
+.taxa-km{color:var(--text-secondary);}
+.taxa-val{font-family:'Sora',sans-serif;font-weight:700;color:var(--text);}
+.taxa-val.hi{color:var(--red);}
+.diaria-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px;}
+.diaria-card{border-radius:var(--radius);padding:28px;}
+.diaria-card.semana{background:var(--white);border:1px solid var(--border);box-shadow:var(--shadow-sm);}
+.diaria-card.fds{background:var(--red);}
+.diaria-tag{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px;}
+.diaria-card.semana .diaria-tag{color:var(--text-secondary);}
+.diaria-card.fds .diaria-tag{color:rgba(255,255,255,.65);}
+.diaria-val{font-family:'Sora',sans-serif;font-size:50px;font-weight:900;letter-spacing:-.03em;line-height:1;}
+.diaria-card.semana .diaria-val{color:var(--text);}
+.diaria-card.fds .diaria-val{color:var(--white);}
+.diaria-sub{font-size:13px;margin-top:6px;}
+.diaria-card.semana .diaria-sub{color:var(--text-secondary);}
+.diaria-card.fds .diaria-sub{color:rgba(255,255,255,.75);}
+
+/* RESUMO */
+.inv-box{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);margin-top:24px;}
+.inv-head{background:var(--text);padding:20px 28px;}
+.inv-head-title{font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:var(--white);}
+.inv-head-sub{font-size:13px;color:rgba(255,255,255,.5);margin-top:3px;}
+.inv-row{display:flex;justify-content:space-between;align-items:flex-start;padding:16px 28px;border-bottom:1px solid var(--border);gap:16px;}
+.inv-row:last-child{border-bottom:none;}
+.inv-row.total-row{background:var(--red-soft);}
+.inv-row-label{font-size:14px;color:var(--text-secondary);flex:1;}
+.inv-row-label strong{display:block;font-size:15px;color:var(--text);margin-bottom:3px;}
+.inv-row-label small{font-size:11px;color:var(--text-secondary);display:block;margin-top:3px;line-height:1.5;}
+.inv-row-val{font-family:'Sora',sans-serif;font-weight:800;font-size:18px;color:var(--text);text-align:right;white-space:nowrap;}
+.inv-row.total-row .inv-row-val{font-size:24px;color:var(--red);}
+.inv-row.total-row .inv-row-label strong{color:var(--red);}
+.inv-badges{display:flex;gap:10px;flex-wrap:wrap;padding:18px 28px;border-top:1px solid var(--border);background:var(--bg);}
+.inv-badge{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-secondary);}
+.inv-badge::before{content:'✅';}
+
+/* TRANSPARÊNCIA */
+.transp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px;}
+.transp-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;box-shadow:var(--shadow-sm);}
+.transp-icon{font-size:22px;margin-bottom:8px;}
+.transp-title{font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.transp-desc{font-size:12px;color:var(--text-secondary);line-height:1.55;}
+
+/* TIMELINE */
+.timeline{display:flex;flex-direction:column;}
+.tl-item{display:grid;grid-template-columns:48px 1fr;gap:20px;padding-bottom:28px;position:relative;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-item::before{content:'';position:absolute;left:23px;top:48px;bottom:0;width:2px;background:var(--border);}
+.tl-item:last-child::before{display:none;}
+.tl-num{width:48px;height:48px;border-radius:50%;background:var(--white);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-size:16px;font-weight:800;color:var(--text-secondary);flex-shrink:0;position:relative;z-index:1;}
+.tl-item.done .tl-num{background:var(--red);border-color:var(--red);color:white;box-shadow:0 4px 12px rgba(234,29,44,.3);}
+.tl-body{padding-top:10px;}
+.tl-when{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text-secondary);margin-bottom:4px;}
+.tl-item.done .tl-when{color:var(--red);}
+.tl-title{font-family:'Sora',sans-serif;font-size:16px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.tl-desc{font-size:14px;color:var(--text-secondary);line-height:1.6;}
+
+/* VIGÊNCIA */
+.vigencia-box{background:var(--text);border-radius:var(--radius);padding:44px;color:var(--white);position:relative;overflow:hidden;}
+.vig-title{font-family:'Sora',sans-serif;font-size:clamp(20px,3vw,28px);font-weight:800;color:white;margin-bottom:10px;}
+.vig-desc{font-size:14px;color:rgba(255,255,255,.55);max-width:520px;line-height:1.7;margin-bottom:24px;}
+.vig-desc strong{color:rgba(255,255,255,.9);}
+.vig-pills{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;}
+.vig-pill{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-xs);padding:10px 16px;}
+.vig-pill-label{font-size:10px;font-weight:700;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;}
+.vig-pill-val{font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:white;}
+.vig-note{font-size:13px;color:rgba(255,255,255,.4);line-height:1.7;border-top:1px solid rgba(255,255,255,.08);padding-top:18px;}
+.vig-note strong{color:rgba(255,255,255,.7);}
+
+/* PARTES */
+.partes-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.parte-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow-sm);}
+.parte-card.destaque{border-color:rgba(234,29,44,.2);background:var(--red-soft);}
+.parte-tag{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text-secondary);margin-bottom:10px;}
+.parte-card.destaque .parte-tag{color:var(--red);}
+.parte-nome{font-family:'Sora',sans-serif;font-size:18px;font-weight:800;color:var(--text);margin-bottom:12px;}
+.parte-info{font-size:13px;color:var(--text-secondary);line-height:1.85;}
+.parte-info strong{color:var(--text-mid);}
+
+/* CTA FINAL */
+.cta-final{background:linear-gradient(135deg,var(--red) 0%,#b91020 100%);border-radius:var(--radius);padding:64px 48px;text-align:center;color:var(--white);position:relative;overflow:hidden;}
+.cta-final::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border-radius:50%;background:rgba(255,255,255,.04);pointer-events:none;}
+.cta-final-stats{display:flex;justify-content:center;gap:0;margin-bottom:36px;position:relative;z-index:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);overflow:hidden;flex-wrap:wrap;}
+.cfs{text-align:center;padding:18px 24px;border-right:1px solid rgba(255,255,255,.1);flex:1;min-width:120px;}
+.cfs:last-child{border-right:none;}
+.cfs-val{font-family:'Sora',sans-serif;font-size:22px;font-weight:900;color:white;line-height:1;}
+.cfs-label{font-size:11px;color:rgba(255,255,255,.6);margin-top:4px;line-height:1.3;}
+.cta-final-kicker{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:12px;position:relative;z-index:1;}
+.cta-final h2{font-size:clamp(22px,4vw,36px);font-weight:900;color:white;letter-spacing:-.025em;margin-bottom:14px;line-height:1.1;position:relative;z-index:1;}
+.cta-final p{font-size:16px;color:rgba(255,255,255,.8);max-width:500px;margin:0 auto 24px;line-height:1.7;position:relative;z-index:1;}
+.urgencia-bar{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-sm);padding:12px 20px;display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:22px;position:relative;z-index:1;flex-wrap:wrap;}
+.urgencia-dot{width:7px;height:7px;border-radius:50%;background:#fbbf24;animation:pulse 1.5s infinite;flex-shrink:0;}
+.urgencia-text{font-size:13px;color:rgba(255,255,255,.75);}
+.urgencia-text strong{color:#fbbf24;}
+.cta-quote{font-family:'Sora',sans-serif;font-size:15px;font-weight:600;color:rgba(255,255,255,.92);background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-sm);padding:16px 22px;margin:0 auto 28px;max-width:460px;position:relative;z-index:1;line-height:1.5;}
+.btn-cta{display:inline-flex;align-items:center;gap:10px;background:white;color:var(--red);font-family:'Sora',sans-serif;font-size:16px;font-weight:800;padding:18px 40px;border-radius:50px;cursor:pointer;position:relative;z-index:1;transition:transform .2s,box-shadow .2s;border:none;box-shadow:0 8px 28px rgba(0,0,0,.2);text-decoration:none;}
+.btn-cta:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(0,0,0,.28);}
+.cta-sub{font-size:13px;color:rgba(255,255,255,.5);margin-top:12px;position:relative;z-index:1;}
+.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px;position:relative;z-index:1;}
+.passo{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-sm);padding:14px 16px;text-align:left;}
+.passo-n{font-size:10px;font-weight:700;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px;}
+.passo-t{font-size:13px;color:rgba(255,255,255,.88);font-weight:600;line-height:1.4;}
+.passo-desc{font-size:11px;color:rgba(255,255,255,.45);margin-top:3px;}
+
+/* FOOTER */
+footer{background:var(--text);border-top:1px solid rgba(255,255,255,.06);padding:40px 0 24px;}
+.footer-inner{max-width:980px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;align-items:start;}
+.footer-brand{font-family:'Sora',sans-serif;font-size:15px;font-weight:800;color:white;margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+.footer-brand-mark{width:26px;height:26px;border-radius:7px;background:var(--red);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.footer-brand-mark svg{width:14px;height:14px;}
+.footer-info{font-size:12px;color:rgba(255,255,255,.35);line-height:1.8;}
+.footer-col-title{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:12px;}
+.footer-links{display:flex;flex-direction:column;gap:8px;}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .15s;}
+.footer-links a:hover{color:white;}
+.footer-bottom{max-width:980px;margin:24px auto 0;padding:20px 24px 0;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-legal{font-size:11px;color:rgba(255,255,255,.2);line-height:1.6;}
+.footer-legal strong{color:rgba(255,255,255,.35);}
+.footer-stamp{display:flex;align-items:center;gap:6px;font-size:11px;color:rgba(255,255,255,.25);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:5px 12px;white-space:nowrap;}
+.footer-stamp-dot{width:5px;height:5px;border-radius:50%;background:var(--green);}
+
+/* MOBILE */
+.mobile-sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;padding:12px 16px;padding-bottom:calc(12px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-top:1px solid var(--border);box-shadow:0 -4px 20px rgba(0,0,0,.08);}
+.mobile-sticky-cta a{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--red);color:var(--white);font-family:'Sora',sans-serif;font-weight:700;font-size:15px;padding:15px;border-radius:14px;text-decoration:none;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  section{padding:44px 0;}
+  .container{padding:0 16px;}
+  .bv-inner{padding:36px 16px;}
+  .bv-info-grid{grid-template-columns:1fr;}
+  .nav-inner{height:56px;padding:0 16px;}
+  .nav-tag{display:none;}
+  .nav-anchors-bar{top:56px;}
+  .hero-inner{padding:40px 0 32px;}
+  .hero h1{font-size:clamp(26px,7vw,34px);}
+  .hero-stats{grid-template-columns:1fr 1fr;gap:10px;}
+  .hero-stats .hero-stat-card:last-child{grid-column:1/-1;}
+  .hsc-val{font-size:22px;}
+  .hero-cta-row{flex-direction:column;align-items:flex-start;}
+  .btn-primary{width:100%;justify-content:center;}
+  .hero-parties{flex-direction:column;}
+  .dados-reais-grid{grid-template-columns:1fr 1fr;}
+  .dr-col{border-right:none;border-bottom:1px solid var(--border);}
+  .chart-row{grid-template-columns:60px 1fr;}
+  .chart-right{display:none;}
+  .dias-grid{grid-template-columns:repeat(4,1fr);}
+  .escala-grid,.taxa-grid,.diaria-pair,.partes-grid,.planos-grid{grid-template-columns:1fr;}
+  .transp-grid{grid-template-columns:1fr;}
+  .bonus-layout{grid-template-columns:1fr;}
+  .phone-mockup{display:none;}
+  .plano-card.rec{transform:none;}
+  .cta-final{padding:36px 18px;border-radius:12px;}
+  .cta-final-stats{flex-direction:column;}
+  .cfs{border-right:none;border-bottom:1px solid rgba(255,255,255,.1);}
+  .cfs:last-child{border-bottom:none;}
+  .passos{grid-template-columns:1fr;}
+  .btn-cta{width:100%;justify-content:center;}
+  .footer-inner{grid-template-columns:1fr;gap:20px;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;}
+  .mobile-sticky-cta{display:block;}
+  .vigencia-box{padding:28px 18px;}
+  .inv-row{flex-direction:column;gap:4px;padding:14px 20px;}
+}
+</style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- ══════════════════════════════════
+     BOAS-VINDAS
+══════════════════════════════════ -->
+<div class="bv-wrap">
+  <div class="bv-inner">
+    <div class="bv-glow"></div>
+    <div class="bv-badge"><span class="bv-badge-dot"></span>Amanhã · 15h30 · Osasco</div>
+    <div class="bv-title">Olá, Adriana.<br>Estamos <em>ansiosos</em> para te receber.</div>
+    <p class="bv-lead">
+      Antes do nosso bate-papo de amanhã, montamos esta proposta com <strong>os dados reais da sua loja</strong> — os mesmos números que você vê todo dia no iFood. Nada inventado, nada estimado à toa.<br><br>
+      Vamos ler tudo juntos às 15h30 com calma, tirar cada dúvida e entender se faz sentido para o momento do Pastel da Drica. Sem pressão, sem pressa.
+    </p>
+    <div class="bv-info-grid">
+      <div class="bv-info-card">
+        <div class="bv-info-icon">📍</div>
+        <div class="bv-info-label">Endereço</div>
+        <div class="bv-info-val">Av. Diogo Antônio Feijó, 855<br>KM 18 — Osasco, SP</div>
+      </div>
+      <div class="bv-info-card">
+        <div class="bv-info-icon">🕒</div>
+        <div class="bv-info-label">Horário marcado</div>
+        <div class="bv-info-val">Amanhã às 15h30</div>
+      </div>
+      <div class="bv-info-card">
+        <div class="bv-info-icon">📋</div>
+        <div class="bv-info-label">O que vamos fazer</div>
+        <div class="bv-info-val">Ler a proposta juntos e tirar todas as dúvidas</div>
+      </div>
+    </div>
+    <div class="bv-msg">
+      💬 <strong>"Adriana, analisamos 60 dias da sua operação no iFood.</strong> Os números que você vai ver aqui são os seus — os pedidos que você fez, os horários que você sabe de cor, os dias que a sua loja bombou. Queremos que você olhe para essa proposta e pense: <em>'é exatamente isso que acontece na minha loja.'</em> Porque é."
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <div class="nav-logo-mark"><svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C8 1.5 3 5 3 9.5a5 5 0 0010 0C13 5 8 1.5 8 1.5z" fill="white"/><circle cx="8" cy="9.5" r="1.8" fill="#ea1d2c"/></svg></div>
+      Osasco Express
+    </div>
+    <div class="nav-right">
+      <div class="nav-tag">Proposta Exclusiva · Pastel da Drica</div>
+      <a href="https://wa.me/5511986661784?text=Ol%C3%A1%2C+quero+saber+mais+sobre+a+proposta+Osasco+Express" class="nav-cta">
+        <svg viewBox="0 0 14 14" fill="none"><path d="M13 7A6 6 0 11 1 7c0-1.2.35-2.3.95-3.25L1 1l3.35.85C5.2 1.32 6.08 1 7 1a6 6 0 016 6z" stroke="currentColor" stroke-width="1.6"/></svg>
+        Falar agora
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ÂNCORAS -->
+<div class="nav-anchors-bar">
+  <div class="nav-anchors-inner">
+    <button class="nav-anchor active" onclick="goTo('#sec-dados')">📊 Seus dados</button>
+    <button class="nav-anchor" onclick="goTo('#sec-escala')">👥 Escala</button>
+    <button class="nav-anchor" onclick="goTo('#sec-planos')">💰 Planos</button>
+    <button class="nav-anchor" onclick="goTo('#sec-bonus')">🎁 Bônus</button>
+    <button class="nav-anchor" onclick="goTo('#sec-taxas')">📍 Taxas</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-kicker"><span class="hero-kicker-dot"></span>Proposta baseada nos seus dados reais · iFood · Osasco</div>
+      <h1>Você já tem o sabor.<br><em>A gente garante a entrega.</em></h1>
+      <p class="hero-lead">O Pastel da Drica tem produto bom, cliente fiel e uma operação noturna consistente. O que esta proposta traz é uma estrutura de entrega que acompanha o ritmo que você já tem — e te prepara para crescer mais.</p>
+      <div class="hero-growth">
+        <div class="hero-growth-icon">📊</div>
+        <div class="hero-growth-text">
+          <strong>Proposta feita com os seus números reais</strong>
+          60 dias de operação analisados · 1.461 pedidos mapeados
+        </div>
+      </div>
+      <div class="hero-cta-row">
+        <a href="https://wa.me/5511986661784?text=Ol%C3%A1%2C+quero+saber+mais+sobre+a+proposta+Osasco+Express" class="btn-primary">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M17 10.5A7 7 0 1 1 3 10.5c0-1.4.4-2.7 1.1-3.8L3 3l3.9 1c1-.6 2.1-1 3.1-1a7 7 0 0 1 7 7z" stroke="currentColor" stroke-width="1.5"/></svg>
+          Falar com a equipe
+        </a>
+        <div class="hero-note"><span class="hero-note-dot"></span>Nos vemos amanhã às 15h30</div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat-card red">
+          <div class="hsc-val" id="s1">0</div>
+          <div class="hsc-label">pedidos em 60 dias · dado real iFood</div>
+          <div class="hsc-trend">↑ dados do seu relatório</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hsc-val" id="s2">0</div>
+          <div class="hsc-label">pedidos/mês em média</div>
+          <div class="hsc-trend">↑ projeção real</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hsc-val" id="s3">0</div>
+          <div class="hsc-label">pedidos no Domingo — seu dia mais forte</div>
+          <div class="hsc-trend">↑ pico confirmado</div>
+        </div>
+      </div>
+      <div class="hero-parties">
+        <div class="party-chip"><strong>Contratante</strong>Adriana Virgínia Garcia · CNPJ 30.294.241/0001-51 · Simples Nacional</div>
+        <div class="party-chip"><strong>Contratada</strong>Osasco Express Serviços Ltda – ME · CNPJ 54.707.097/0001-04</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- 01 DADOS REAIS -->
+<section id="sec-dados" style="background:var(--white);">
+  <div class="container">
+    <div class="sec-header fade-in">
+      <div class="sec-kicker">01 — Os seus dados reais</div>
+      <h2>Esses números são seus.<br><em>Extraídos direto do seu relatório iFood.</em></h2>
+      <p>Analisamos o relatório que você exportou do iFood — 60 dias de operação real, de 03/02/2026 a 03/04/2026. Nenhum número foi inventado ou estimado. O que você vai ver aqui é a fotografia exata da sua loja.</p>
+    </div>
+
+    <!-- BLOCO DADOS REAIS -->
+    <div class="dados-reais-wrap fade-in">
+      <div class="dados-reais-head">
+        <div>
+          <div class="dados-reais-title">Relatório de vendas · Pastel da Drica · iFood</div>
+          <div class="dados-reais-sub">Entrega parceira · App iFood · Osasco, SP</div>
+        </div>
+        <div class="dados-reais-period">03/02/2026 – 03/04/2026</div>
+      </div>
+      <div class="dados-reais-grid">
+        <div class="dr-col">
+          <div class="dr-val red">1.461</div>
+          <div class="dr-label">Total de pedidos no período</div>
+          <div class="dr-note">dado exato do relatório</div>
+        </div>
+        <div class="dr-col">
+          <div class="dr-val">730</div>
+          <div class="dr-label">Média de pedidos por mês</div>
+          <div class="dr-note">1.461 ÷ 2 meses</div>
+        </div>
+        <div class="dr-col">
+          <div class="dr-val green">24</div>
+          <div class="dr-label">Média de pedidos por dia</div>
+          <div class="dr-note">nos dias com venda</div>
+        </div>
+        <div class="dr-col">
+          <div class="dr-val">100%</div>
+          <div class="dr-label">Das vendas entre 18h e 24h</div>
+          <div class="dr-note">zero vendas antes das 18h</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRÁFICO HORÁRIO -->
+    <div class="chart-wrap fade-in">
+      <div class="chart-head">
+        <div>
+          <div class="chart-title">Seus pedidos por horário — dados reais do relatório iFood</div>
+          <div class="chart-meta">Período: 03/02/2026 – 03/04/2026 · totais acumulados por faixa</div>
+        </div>
+        <div class="chart-tabs">
+          <div class="ctab ab" onclick="showChart('sem',this,'b')">Seg – Qui</div>
+          <div class="ctab" onclick="showChart('fds',this,'r')">Sex – Dom</div>
+        </div>
+      </div>
+      <div class="chart-body">
+        <div class="chart-panel active" id="chart-sem">
+          <div class="chart-row">
+            <div class="chart-hour">00h–18h</div>
+            <div class="bar-track"><div class="bar-fill c0" data-w="3">Zero vendas neste horário</div></div>
+            <div class="chart-right"><strong>0 pedidos</strong><span class="real-badge">real</span></div>
+          </div>
+          <div class="chart-row">
+            <div class="chart-hour">18h–20h</div>
+            <div class="bar-track"><div class="bar-fill c1" data-w="25">Aquecimento · chegando</div></div>
+            <div class="chart-right"><strong>181 pedidos</strong><span class="real-badge">real</span><br>no período todo</div>
+          </div>
+          <div class="chart-row">
+            <div class="chart-hour">20h–22h</div>
+            <div class="bar-track"><div class="bar-fill c4" data-w="100">⚡ SEU PICO — 337 pedidos</div></div>
+            <div class="chart-right peak"><strong>337 pedidos</strong><span class="real-badge">real</span><br>46% de tudo que você vende</div>
+          </div>
+          <div class="chart-row">
+            <div class="chart-hour">22h–24h</div>
+            <div class="bar-track"><div class="bar-fill c5" data-w="63">Pós-pico · finalizando</div></div>
+            <div class="chart-right"><strong>212 pedidos</strong><span class="real-badge">real</span></div>
+          </div>
+          <div class="pico-destaque">
+            <div class="pico-destaque-label"><span class="pico-dot"></span>Das 20h às 22h saíram <strong>337 pedidos</strong> — quase metade de tudo que você vendeu na semana no período</div>
+            <span class="pico-destaque-val">Dado real do seu relatório</span>
+          </div>
+        </div>
+        <div class="chart-panel" id="chart-fds">
+          <div class="chart-row">
+            <div class="chart-hour">00h–18h</div>
+            <div class="bar-track"><div class="bar-fill c0" data-w="3">Zero vendas neste horário</div></div>
+            <div class="chart-right"><strong>0 pedidos</strong><span class="real-badge">real</span></div>
+          </div>
+          <div class="chart-row">
+            <div class="chart-hour">18h–20h</div>
+            <div class="bar-track"><div class="bar-fill c1" data-w="29">Aquecimento</div></div>
+            <div class="chart-right"><strong>183 pedidos</strong><span class="real-badge">real</span></div>
+          </div>
+          <div class="chart-row">
+            <div class="chart-hour">20h–22h</div>
+            <div class="bar-track"><div class="bar-fill c4" data-w="100">🔥 PICO FDS — 311 pedidos</div></div>
+            <div class="chart-right peak"><strong>311 pedidos</strong><span class="real-badge">real</span><br>43% de tudo no FDS</div>
+          </div>
+          <div class="chart-row">
+            <div class="chart-hour">22h–24h</div>
+            <div class="bar-track"><div class="bar-fill c5" data-w="75">Pós-pico</div></div>
+            <div class="chart-right"><strong>233 pedidos</strong><span class="real-badge">real</span></div>
+          </div>
+          <div class="pico-destaque">
+            <div class="pico-destaque-label"><span class="pico-dot"></span>No fim de semana você ainda vende mais depois das 22h — <strong>233 pedidos</strong> no período, mais que na semana</div>
+            <span class="pico-destaque-val">Dado real do seu relatório</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VOLUME POR DIA -->
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);margin-top:18px;" class="fade-in">
+      <div style="padding:18px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+        <div>
+          <div style="font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:var(--text);">Seus pedidos por dia da semana</div>
+          <div style="font-size:12px;color:var(--text-secondary);margin-top:3px;">Totais acumulados em 60 dias · dado exato do relatório iFood</div>
+        </div>
+        <div style="font-size:11px;font-weight:700;color:var(--green);background:var(--green-soft);padding:4px 12px;border-radius:20px;">100% dados reais</div>
+      </div>
+      <div style="padding:20px 24px;">
+        <div class="dias-grid">
+          <div class="dia-col"><div class="dia-num" style="font-size:20px;">157</div><div class="dia-label">Seg</div><div class="dia-media">~18/dia</div></div>
+          <div class="dia-col"><div class="dia-num" style="font-size:20px;">161</div><div class="dia-label">Ter</div><div class="dia-media">~18/dia</div></div>
+          <div class="dia-col"><div class="dia-num" style="font-size:20px;">198</div><div class="dia-label">Qua</div><div class="dia-media">~22/dia</div></div>
+          <div class="dia-col"><div class="dia-num" style="font-size:20px;">214</div><div class="dia-label">Qui</div><div class="dia-media">~24/dia</div></div>
+          <div class="dia-col pico-dia"><div class="dia-num" style="font-size:22px;">255</div><div class="dia-label">Sex 🔴</div><div class="dia-media">~28/dia</div><div class="dia-badge">Forte</div></div>
+          <div class="dia-col pico-dia"><div class="dia-num" style="font-size:22px;">209</div><div class="dia-label">Sáb 🔴</div><div class="dia-media">~23/dia</div><div class="dia-badge">Forte</div></div>
+          <div class="dia-col pico-max"><div class="dia-num">263</div><div class="dia-label">Dom 🏆</div><div class="dia-media">~29/dia</div><div class="dia-badge">Seu pico</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout fade-in" style="margin-top:16px;">
+      <strong>Adriana, o Domingo é o seu dia mais forte.</strong> 263 pedidos no período — mais que qualquer outro dia. É exatamente nesse dia que a estrutura de entrega precisa ser garantida. Um entregador que falta no domingo é o dia mais caro para sua loja.
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- 02 ESCALA -->
+<section id="sec-escala">
+  <div class="container">
+    <div class="sec-header fade-in">
+      <div class="sec-kicker">02 — A escala feita para a sua realidade</div>
+      <h2>Operação noturna.<br><em>Enxuta, sem desperdício.</em></h2>
+      <p>Como você não vende nada antes das 18h, não faz sentido pagar entregador parado durante o dia. A escala foi desenhada para o seu horário real — das 18h às 24h, todos os dias.</p>
+    </div>
+    <div class="escala-grid fade-in">
+      <div class="escala-card">
+        <div class="escala-head blue">
+          <div class="escala-dot blue"></div>
+          <div class="escala-head-info">
+            <div class="escala-head-title blue">Segunda a Quinta</div>
+            <div class="escala-head-vol">~20 pedidos/dia · operação regular</div>
+          </div>
+          <div class="escala-head-badge blue">Semana</div>
+        </div>
+        <div class="erow"><div><div class="erow-hora">18h – 20h</div><div class="erow-sub">Aquecimento</div></div><div class="erow-info">Pedidos chegando<br>ritmo crescente</div><div class="erow-num">2<small>entregadores</small></div></div>
+        <div class="erow pico"><div><div class="erow-hora">20h – 22h</div><div class="erow-sub">⚡ Seu pico</div></div><div class="erow-info">337 ped. no período<br>46% de tudo que você vende</div><div class="erow-num">2<small>entregadores</small></div></div>
+        <div class="erow"><div><div class="erow-hora">22h – 24h</div><div class="erow-sub">Pós-pico</div></div><div class="erow-info">Pedidos finalizando<br>212 ped. no período</div><div class="erow-num">2<small>entregadores</small></div></div>
+      </div>
+      <div class="escala-card">
+        <div class="escala-head red">
+          <div class="escala-dot red"></div>
+          <div class="escala-head-info">
+            <div class="escala-head-title red">Sexta a Domingo</div>
+            <div class="escala-head-vol">~27 pedidos/dia · seu momento mais forte</div>
+          </div>
+          <div class="escala-head-badge red">FDS</div>
+        </div>
+        <div class="erow"><div><div class="erow-hora">18h – 20h</div><div class="erow-sub">Aquecimento FDS</div></div><div class="erow-info">183 ped. no período<br>entrada mais rápida</div><div class="erow-num">2<small>entregadores</small></div></div>
+        <div class="erow pico-forte"><div><div class="erow-hora">20h – 22h</div><div class="erow-sub">🔥 Pico do FDS</div></div><div class="erow-info">311 ped. no período<br>Domingo: 263 pedidos!</div><div class="erow-num">2<small>entregadores</small></div></div>
+        <div class="erow"><div><div class="erow-hora">22h – 24h</div><div class="erow-sub">Pós-pico</div></div><div class="erow-info">233 ped. no período<br>mais que a semana</div><div class="erow-num">2<small>entregadores</small></div></div>
+      </div>
+    </div>
+    <div class="callout green fade-in" style="margin-top:18px;">
+      <strong>Zero custo com horário que você não usa.</strong> Enquanto outras estruturas cobram turno manhã, a nossa escala começa exatamente quando sua loja começa a receber pedido — 18h. Você paga só pelo que usa.
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- 03 PLANOS -->
+<section id="sec-planos" style="background:var(--white);">
+  <div class="container">
+    <div class="sec-header fade-in">
+      <div class="sec-kicker">03 — Os planos disponíveis</div>
+      <h2>Começa onde faz sentido.<br><em>Cresce quando quiser.</em></h2>
+      <p>Cada plano foi pensado para um momento diferente do negócio. Com 730 pedidos/mês, o Plano Básico é o ideal agora. Quando o volume crescer, você migra sem burocracia.</p>
+    </div>
+    <div class="planos-grid fade-in">
+      <div class="plano-card rec">
+        <div class="plano-rec-badge">Ideal para você agora</div>
+        <div class="plano-nome">Básico</div>
+        <div class="plano-val">R$ 799</div>
+        <div class="plano-mes">/mês</div>
+        <div class="plano-limite">Até 800 entregas/mês</div>
+        <ul class="plano-items">
+          <li>2 entregadores fixos noturnos</li>
+          <li>Gestão completa da operação</li>
+          <li>Escala confirmada todo dia</li>
+          <li>Rastreamento GPS em tempo real</li>
+          <li>Relatório semanal toda segunda</li>
+          <li>Suporte ativo durante o turno</li>
+          <li>Nota fiscal mensal</li>
+        </ul>
+        <div class="plano-por-pedido">≈ R$ 1,09 por pedido gerenciado</div>
+      </div>
+      <div class="plano-card">
+        <div class="plano-nome">Médio</div>
+        <div class="plano-val">R$ 1.100</div>
+        <div class="plano-mes">/mês</div>
+        <div class="plano-limite">Até 1.200 entregas/mês</div>
+        <ul class="plano-items">
+          <li>Tudo do Básico</li>
+          <li>Consultoria de cardápio iFood</li>
+          <li>5 edições de títulos e descrições</li>
+          <li>SEO do cardápio</li>
+          <li>2 combos estratégicos criados</li>
+        </ul>
+        <div class="plano-por-pedido">≈ R$ 0,92 por pedido</div>
+      </div>
+      <div class="plano-card">
+        <div class="plano-nome">Avançado</div>
+        <div class="plano-val">R$ 1.600</div>
+        <div class="plano-mes">/mês</div>
+        <div class="plano-limite">Até 1.800 entregas/mês</div>
+        <ul class="plano-items">
+          <li>Tudo do Médio</li>
+          <li>Estratégia completa iFood</li>
+          <li>Dashboard de vendas</li>
+          <li>Checklist operacional</li>
+          <li>Análise de avaliações</li>
+        </ul>
+        <div class="plano-por-pedido">≈ R$ 0,89 por pedido</div>
+      </div>
+      <div class="plano-card gold-plan">
+        <div class="plano-gold-badge">Para crescimento alto</div>
+        <div class="plano-nome">Personalizado</div>
+        <div class="plano-val" style="font-size:18px;margin-top:6px;">Sob consulta</div>
+        <div class="plano-mes">/mês</div>
+        <div class="plano-limite">Acima de 1.800/mês</div>
+        <ul class="plano-items">
+          <li>Tudo do Avançado</li>
+          <li>Volume sem limite</li>
+          <li>Escala personalizada</li>
+          <li>Gestão dedicada</li>
+          <li>Preço negociado por volume</li>
+        </ul>
+        <div class="plano-por-pedido" style="background:var(--gold-soft);color:var(--gold);">escala com você</div>
+      </div>
+    </div>
+    <div class="callout blue fade-in" style="margin-top:18px;">
+      <strong>Por que o Básico agora?</strong> Seus 730 pedidos/mês ficam bem dentro do limite de 800. Você paga só pelo que precisa, sem pagar por capacidade que ainda não usa. Quando o volume ultrapassar 800 pedidos, a migração para o Médio acontece automaticamente, sem assinar nada novo.
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- 04 BÔNUS -->
+<section id="sec-bonus">
+  <div class="container">
+    <div class="sec-header fade-in">
+      <div class="sec-kicker">04 — Bônus exclusivo de boas-vindas</div>
+      <h2>Mais pedidos sem pagar nada a mais.<br><em>Consultoria de cardápio grátis.</em></h2>
+      <p>Quem fecha o Plano Básico agora recebe, sem custo adicional, a consultoria de cardápio que normalmente só está disponível no Plano Médio — R$ 1.100/mês.</p>
+    </div>
+    <div class="bonus-wrap fade-in">
+      <div class="bonus-kicker">🎁 Bônus de boas-vindas · incluso no Plano Básico</div>
+      <div class="bonus-title">Consultoria de Cardápio iFood + SEO</div>
+      <div class="bonus-desc">Muita loja perde pedido antes mesmo de começar — porque o cliente não clica. <strong>Título sem apelo, descrição vaga, produto sem destaque.</strong> A gente corrige isso antes de você fazer a primeira entrega com a nossa equipe.</div>
+      <div class="bonus-layout">
+        <div>
+          <div class="bonus-items">
+            <div class="bonus-item">
+              <div class="bonus-item-icon">🔍</div>
+              <div>
+                <div class="bonus-item-title">Diagnóstico completo do cardápio</div>
+                <div class="bonus-item-desc">Vemos todos os seus itens como o cliente vê — e apontamos o que está afastando pedido e o que precisa de ajuste imediato.</div>
+              </div>
+            </div>
+            <div class="bonus-item">
+              <div class="bonus-item-icon">✏️</div>
+              <div>
+                <div class="bonus-item-title">5 edições de títulos e descrições</div>
+                <div class="bonus-item-desc">Reescrita dos produtos mais importantes com linguagem que aparece nas buscas do iFood e convence o cliente a pedir.</div>
+              </div>
+            </div>
+            <div class="bonus-item">
+              <div class="bonus-item-icon">📈</div>
+              <div>
+                <div class="bonus-item-title">SEO do cardápio · apareça antes no iFood</div>
+                <div class="bonus-item-desc">Palavras certas nos títulos para o algoritmo do iFood te colocar na frente de quem está procurando pastel em Osasco agora.</div>
+              </div>
+            </div>
+            <div class="bonus-item">
+              <div class="bonus-item-icon">🎯</div>
+              <div>
+                <div class="bonus-item-title">Padrão para você replicar sozinha</div>
+                <div class="bonus-item-desc">Depois das 5 edições você entende a lógica e consegue aplicar nos outros itens. A consultoria ensina — não cria dependência.</div>
+              </div>
+            </div>
+          </div>
+          <div class="bonus-valor">
+            <div class="bonus-valor-label">Valor deste serviço no Plano Médio</div>
+            <div class="bonus-valor-num">R$ 1.100/mês</div>
+            <div class="bonus-valor-gratis">GRÁTIS para você</div>
+            <div class="bonus-valor-sub">Incluso no Plano Básico para quem fechar agora.<br>Após a implantação, disponível apenas no Plano Médio.</div>
+          </div>
+        </div>
+        <div class="phone-mockup">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-status"><span class="phone-status-time">20:22</span><span style="font-size:10px;">📶🔋</span></div>
+              <div class="ifood-header"><span class="ifood-back">‹</span><div class="ifood-header-title">Pastel da Drica 🥟</div></div>
+              <div class="store-banner"><div><div class="store-banner-name">Pastel da Drica 🥟</div><div style="font-size:8px;color:rgba(255,255,255,.8);">Osasco · Aberto agora</div></div></div>
+              <div class="store-info-bar"><span>⭐ 4.8 (312)</span><span>• 25–35 min</span><span>• Grátis</span></div>
+              <div class="ifood-category">🔥 Mais Pedidos</div>
+              <div class="ifood-product">
+                <div class="ifood-product-img">🥟</div>
+                <div class="ifood-product-info">
+                  <div class="ifood-product-name">Pastel Frango c/ Catupiry<div class="seo-badge">SEO ✓</div></div>
+                  <div class="ifood-product-desc">Massa crocante, recheio generoso. O favorito de Osasco!</div>
+                  <div class="ifood-product-price">R$ 18,90</div>
+                </div>
+                <div class="ifood-add-btn">+</div>
+              </div>
+              <div class="ifood-product">
+                <div class="ifood-product-img">🧀</div>
+                <div class="ifood-product-info">
+                  <div class="ifood-product-name">Combo 2 Pastéis + Caldo<div class="seo-badge">SEO ✓</div></div>
+                  <div class="ifood-product-desc">Escolha 2 sabores + caldo. Perfeito para dividir!</div>
+                  <div class="ifood-product-price">R$ 32,90</div>
+                </div>
+                <div class="ifood-add-btn">+</div>
+              </div>
+              <div class="ifood-product">
+                <div class="ifood-product-img">🌶️</div>
+                <div class="ifood-product-info">
+                  <div class="ifood-product-name">Pastel Carne Seca + Queijo</div>
+                  <div class="ifood-product-desc">Carne seca desfiada na manteiga com queijo derretido.</div>
+                  <div class="ifood-product-price">R$ 21,90</div>
+                </div>
+                <div class="ifood-add-btn">+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- 05 TAXAS -->
+<section id="sec-taxas" style="background:var(--white);">
+  <div class="container">
+    <div class="sec-header fade-in">
+      <div class="sec-kicker">05 — Taxas e diárias · 100% transparente</div>
+      <h2>Você sabe exatamente<br><em>o que paga por cada entrega.</em></h2>
+      <p>Sem estimativa, sem surpresa no fechamento. Cada corrida é cobrada pelo km que o entregador percorreu de verdade — e você vê tudo no relatório semanal de toda segunda-feira.</p>
+    </div>
+    <div class="taxa-grid fade-in">
+      <div class="taxa-block">
+        <div class="taxa-head blue"><svg width="10" height="10" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="#1a73e8"/></svg><div class="taxa-head-info"><div class="taxa-head-label blue">Taxas de corrida — Semana</div><div class="taxa-head-dias">Segunda a Quinta</div></div></div>
+        <div class="taxa-row"><span class="taxa-km">Até 1 km</span><span class="taxa-val">R$ 4,99</span></div>
+        <div class="taxa-row popular"><span class="taxa-km">1,1 a 7 km</span><span class="taxa-val">R$ 6,00</span></div>
+        <div class="taxa-row"><span class="taxa-km">7,1 a 10 km</span><span class="taxa-val">R$ 12,00</span></div>
+        <div class="taxa-row"><span class="taxa-km">10,1 a 12 km</span><span class="taxa-val hi">R$ 15,00</span></div>
+      </div>
+      <div class="taxa-block">
+        <div class="taxa-head red"><svg width="10" height="10" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="#ea1d2c"/></svg><div class="taxa-head-info"><div class="taxa-head-label red">Taxas de corrida — FDS</div><div class="taxa-head-dias">Sexta a Domingo + Feriados</div></div></div>
+        <div class="taxa-row"><span class="taxa-km">Até 1 km</span><span class="taxa-val">R$ 5,99</span></div>
+        <div class="taxa-row popular"><span class="taxa-km">1,1 a 7 km</span><span class="taxa-val">R$ 8,00</span></div>
+        <div class="taxa-row"><span class="taxa-km">7,1 a 10 km</span><span class="taxa-val">R$ 14,00</span></div>
+        <div class="taxa-row"><span class="taxa-km">10,1 a 12 km</span><span class="taxa-val hi">R$ 17,00</span></div>
+      </div>
+    </div>
+    <div class="callout green fade-in" style="margin-top:16px;"><strong>Você pode cobrar taxa de entrega do cliente.</strong> R$ 5 a R$ 8 de frete é prática comum no iFood — cobre boa parte do custo da corrida. Você decide se cobra ou não. Não tem obrigação.</div>
+
+    <div style="margin-top:32px;" class="fade-in">
+      <div style="font-family:'Sora',sans-serif;font-size:16px;font-weight:700;color:var(--text);margin-bottom:16px;">Diária por entregador · turno noturno 18h–24h</div>
+      <div class="diaria-pair">
+        <div class="diaria-card semana">
+          <div class="diaria-tag">Segunda a Quinta</div>
+          <div class="diaria-val">R$ 60</div>
+          <div class="diaria-sub">por entregador · por turno de 6h</div>
+        </div>
+        <div class="diaria-card fds">
+          <div class="diaria-tag">Sexta · Sábado · Domingo · Feriados</div>
+          <div class="diaria-val">R$ 65</div>
+          <div class="diaria-sub">por entregador · por turno de 6h</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRANSPARÊNCIA -->
+    <div class="transp-grid fade-in">
+      <div class="transp-card">
+        <div class="transp-icon">📋</div>
+        <div class="transp-title">Relatório toda segunda-feira</div>
+        <div class="transp-desc">Quantas entregas foram feitas, qual o custo total da semana, quais corridas e distâncias. Tudo documentado, sem surpresa no fechamento.</div>
+      </div>
+      <div class="transp-card">
+        <div class="transp-icon">🧾</div>
+        <div class="transp-title">Nota fiscal todo mês</div>
+        <div class="transp-desc">NFS-e emitida mensalmente sobre a taxa de gestão. Tudo dentro da lei, dedutível como despesa operacional pelo seu contador.</div>
+      </div>
+      <div class="transp-card">
+        <div class="transp-icon">💬</div>
+        <div class="transp-title">Suporte humano · sem bot</div>
+        <div class="transp-desc">Canal direto com a equipe da Osasco Express durante todo o turno. Você fala com uma pessoa real — não com formulário, não com fila.</div>
+      </div>
+    </div>
+
+    <!-- RESUMO INVESTIMENTO -->
+    <div class="inv-box fade-in">
+      <div class="inv-head">
+        <div class="inv-head-title">Estimativa de investimento mensal · Plano Básico</div>
+        <div class="inv-head-sub">Valores calculados com base nos seus dados reais de volume e operação noturna.</div>
+      </div>
+      <div class="inv-row">
+        <div class="inv-row-label">
+          <strong>Diárias dos entregadores</strong>
+          <small>2 entregadores × 6 dias/semana × 4 semanas<br>Seg–Qui: R$ 60/turno · Sex–Dom: R$ 65/turno</small>
+        </div>
+        <div class="inv-row-val">≈ R$ 3.720</div>
+      </div>
+      <div class="inv-row">
+        <div class="inv-row-label">
+          <strong>Taxas de corrida por km</strong>
+          <small>~730 entregas × distância média estimada das entregas<br>Varia conforme km real percorrido em cada entrega</small>
+        </div>
+        <div class="inv-row-val">≈ R$ 2.900</div>
+      </div>
+      <div class="inv-row">
+        <div class="inv-row-label">
+          <strong>Taxa de gestão logística</strong>
+          <small>Plano Básico · até 800 entregas/mês<br>Cobre gestão, escala, suporte, relatório e tecnologia</small>
+        </div>
+        <div class="inv-row-val">R$ 799</div>
+      </div>
+      <div class="inv-row total-row">
+        <div class="inv-row-label"><strong>Total mensal estimado</strong></div>
+        <div class="inv-row-val">≈ R$ 7.419</div>
+      </div>
+      <div class="inv-badges">
+        <div class="inv-badge">Nota fiscal todo mês</div>
+        <div class="inv-badge">Relatório toda segunda</div>
+        <div class="inv-badge">Falta coberta por nós</div>
+        <div class="inv-badge">Sem comissão sobre vendas</div>
+        <div class="inv-badge">Consultoria de cardápio grátis</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- 06 TIMELINE -->
+<section>
+  <div class="container">
+    <div class="sec-header fade-in">
+      <div class="sec-kicker">06 — Como começa</div>
+      <h2>Do nosso bate-papo<br><em>à primeira entrega em 5 dias.</em></h2>
+      <p>Sem burocracia, sem papel, sem cartório. Tudo digital — e a equipe que vai cuidar da sua loja começa a trabalhar antes mesmo da primeira entrega.</p>
+    </div>
+    <div style="max-width:560px;" class="fade-in">
+      <div class="timeline">
+        <div class="tl-item done"><div class="tl-num">✓</div><div class="tl-body"><div class="tl-when">Amanhã às 15h30</div><div class="tl-title">Nosso bate-papo na Osasco Express</div><div class="tl-desc">Lemos a proposta juntos, tiramos cada dúvida com calma. Se fizer sentido, avançamos. Se não fizer, tudo bem também.</div></div></div>
+        <div class="tl-item done"><div class="tl-num">✓</div><div class="tl-body"><div class="tl-when">Em até 24h</div><div class="tl-title">Contrato digital enviado por e-mail</div><div class="tl-desc">Assinatura eletrônica com validade jurídica completa. Sem papel, sem cartório, no celular mesmo.</div></div></div>
+        <div class="tl-item done"><div class="tl-num">✓</div><div class="tl-body"><div class="tl-when">Em até 3 dias</div><div class="tl-title">Consultoria de cardápio (bônus grátis)</div><div class="tl-desc">Diagnóstico + 5 edições de títulos e descrições com SEO. Antes mesmo de começar a entrega, você já aparece melhor no iFood.</div></div></div>
+        <div class="tl-item"><div class="tl-num">4</div><div class="tl-body"><div class="tl-when">Até D+5</div><div class="tl-title">Sistema integrado e equipe posicionada</div><div class="tl-desc">Entregadores alocados para o turno das 18h–24h. Sistema testado. Escala confirmada para o primeiro dia de operação.</div></div></div>
+        <div class="tl-item"><div class="tl-num">5</div><div class="tl-body"><div class="tl-when">Operação ativa</div><div class="tl-title">Primeira entrega com rastreamento GPS</div><div class="tl-desc">Suporte ativo durante o turno, GPS funcionando, relatório semanal iniciado. A Osasco Express cuida — você foca no pastel.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- 07 VIGÊNCIA -->
+<section style="background:var(--white);">
+  <div class="container">
+    <div class="vigencia-box fade-in">
+      <div class="sec-kicker" style="color:rgba(255,255,255,.35);">07 — Vigência e condições</div>
+      <div class="vig-title">Condições claras.<br>Sem surpresa, sem letra miúda.</div>
+      <p class="vig-desc">Vigência inicial de <strong>12 meses</strong> com renovação automática. Rescisão com aviso de 30 dias. Pagamento semanal toda segunda-feira. Reajuste anual pelo IPCA.</p>
+      <div class="vig-pills">
+        <div class="vig-pill"><div class="vig-pill-label">Vigência</div><div class="vig-pill-val">12 meses</div></div>
+        <div class="vig-pill"><div class="vig-pill-label">Pagamento</div><div class="vig-pill-val">Toda segunda-feira</div></div>
+        <div class="vig-pill"><div class="vig-pill-label">Reajuste anual</div><div class="vig-pill-val">IPCA</div></div>
+        <div class="vig-pill"><div class="vig-pill-label">Aviso para sair</div><div class="vig-pill-val">30 dias</div></div>
+        <div class="vig-pill"><div class="vig-pill-label">Renovação</div><div class="vig-pill-val">Automática</div></div>
+      </div>
+      <div class="vig-note"><strong>O contrato é um instrumento entre duas empresas.</strong> Assinatura digital com validade jurídica completa. Qualquer dúvida sobre alguma cláusula — lemos juntos no nosso bate-papo de amanhã, sem pressa.</div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- 08 PARTES -->
+<section>
+  <div class="container">
+    <div class="sec-header fade-in">
+      <div class="sec-kicker">08 — As partes desta proposta</div>
+      <h2>Quem somos nós.<br>Quem é você.</h2>
+    </div>
+    <div class="partes-grid fade-in">
+      <div class="parte-card destaque">
+        <div class="parte-tag">Prestadora de serviços</div>
+        <div class="parte-nome">Osasco Express</div>
+        <div class="parte-info">
+          Osasco Express Serviços Ltda – ME<br>
+          CNPJ: <strong>54.707.097/0001-04</strong><br>
+          Av. Diogo Antônio Feijó, 855 — KM 18, Osasco/SP<br>
+          <strong>contato@osascoexpress.com.br</strong><br>
+          (11) 98666-1784 · www.osascoexpress.com.br
+        </div>
+      </div>
+      <div class="parte-card">
+        <div class="parte-tag">Contratante</div>
+        <div class="parte-nome">Pastel da Drica</div>
+        <div class="parte-info">
+          Adriana Virgínia Garcia<br>
+          CNPJ: <strong>30.294.241/0001-51</strong><br>
+          Rua Eduardo Dias, 75 — Jardim Roberto, Osasco/SP<br>
+          Regime: <strong>Simples Nacional</strong><br>
+          Responsável: <strong>Adriana Virgínia Garcia</strong> · Administradora<br>
+          (11) 96824-7879 · contato@restaurante.com.br
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- CTA FINAL -->
+<section>
+  <div class="container">
+    <div class="cta-final fade-in">
+      <div class="cta-final-stats">
+        <div class="cfs"><div class="cfs-val">1.461</div><div class="cfs-label">pedidos reais analisados</div></div>
+        <div class="cfs"><div class="cfs-val">263</div><div class="cfs-label">pedidos no seu domingo de pico</div></div>
+        <div class="cfs"><div class="cfs-val">R$ 799</div><div class="cfs-label">taxa de gestão / mês</div></div>
+        <div class="cfs"><div class="cfs-val">Grátis</div><div class="cfs-label">consultoria de cardápio</div></div>
+      </div>
+      <div class="cta-final-kicker">Nova parceria · Osasco Express × Pastel da Drica</div>
+      <h2>Quem estrutura a entrega hoje<br>vende muito mais amanhã.</h2>
+      <p>Você tem produto bom, cliente que volta e uma operação noturna consistente. O próximo passo é garantir que cada pedido chegue no prazo — e que mais clientes te encontrem no iFood. A gente cuida dos dois juntos, do seu jeito.</p>
+      <div class="urgencia-bar"><span class="urgencia-dot"></span><span class="urgencia-text">Bônus de consultoria de cardápio garantido para quem fechar agora · <strong>proposta válida por 10 dias</strong></span></div>
+      <div class="cta-quote">Entrega boa é produto bom que chega inteiro, no tempo certo — e o cliente sabendo onde está o pedido dele.</div>
+      <a href="https://wa.me/5511986661784?text=Ol%C3%A1%2C+quero+fechar+a+proposta+Osasco+Express+para+o+Pastel+da+Drica" class="btn-cta">
+        <svg viewBox="0 0 20 20" fill="none"><path d="M17 10.5A7 7 0 1 1 3 10.5c0-1.4.4-2.7 1.1-3.8L3 3l3.9 1c1-.6 2.1-1 3.1-1a7 7 0 0 1 7 7z" stroke="currentColor" stroke-width="1.8"/></svg>
+        Nos vemos amanhã às 15h30
+      </a>
+      <div class="cta-sub">Av. Diogo Antônio Feijó, 855 — KM 18, Osasco · Qualquer dúvida antes? WhatsApp aberto.</div>
+      <div class="passos">
+        <div class="passo"><div class="passo-n">Amanhã · 15h30</div><div class="passo-t">Bate-papo na Osasco Express</div><div class="passo-desc">Lemos juntos, sem pressa</div></div>
+        <div class="passo"><div class="passo-n">Em até 3 dias</div><div class="passo-t">Consultoria de cardápio grátis</div><div class="passo-desc">SEO + títulos + descrições</div></div>
+        <div class="passo"><div class="passo-n">Em até 5 dias</div><div class="passo-t">Operação ativa</div><div class="passo-desc">Equipe em campo, GPS ligado</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand"><div class="footer-brand-mark"><svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5C8 1.5 3 5 3 9.5a5 5 0 0010 0C13 5 8 1.5 8 1.5z" fill="white"/><circle cx="8" cy="9.5" r="1.8" fill="#ea1d2c"/></svg></div>Osasco Express</div>
+      <div class="footer-info">Osasco Express Serviços Ltda – ME<br>CNPJ 54.707.097/0001-04<br>Av. Diogo Antônio Feijó, 855 — KM 18, Osasco, SP</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Contato</div>
+      <div class="footer-links">
+        <a href="tel:+5511986661784">(11) 98666-1784</a>
+        <a href="mailto:contato@osascoexpress.com.br">contato@osascoexpress.com.br</a>
+        <a href="https://www.osascoexpress.com.br" target="_blank">www.osascoexpress.com.br</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Esta proposta</div>
+      <div class="footer-info">Elaborada com dados reais do relatório iFood<br>Período analisado: 03/02 – 03/04/2026<br>1.461 pedidos mapeados<br>Válida por 10 dias a partir do envio</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal"><strong>Proposta Comercial Confidencial</strong> · Osasco Express × Pastel da Drica (Adriana Virgínia Garcia)</div>
+    <div class="footer-stamp"><span class="footer-stamp-dot"></span>Nos vemos amanhã às 15h30</div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY -->
+<div class="mobile-sticky-cta">
+  <a href="https://wa.me/5511986661784?text=Ol%C3%A1%2C+quero+fechar+a+proposta+Osasco+Express+para+o+Pastel+da+Drica">
+    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M17 10.5A7 7 0 1 1 3 10.5c0-1.4.4-2.7 1.1-3.8L3 3l3.9 1c1-.6 2.1-1 3.1-1a7 7 0 0 1 7 7z" stroke="currentColor" stroke-width="1.6"/></svg>
+    Nos vemos amanhã às 15h30
+  </a>
+</div>
+
+<script>
+window.addEventListener('scroll',function(){
+  var d=document.documentElement;
+  document.getElementById('progress-bar').style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+'%';
+  document.getElementById('main-nav').classList.toggle('scrolled',window.scrollY>10);
+});
+
+var secs=['sec-dados','sec-escala','sec-planos','sec-bonus','sec-taxas'];
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+120;
+  secs.forEach(function(id){
+    var el=document.getElementById(id);
+    var btn=document.querySelector('.nav-anchor[onclick*="'+id+'"]');
+    if(!el||!btn)return;
+    if(el.offsetTop<=y&&el.offsetTop+el.offsetHeight>y){
+      document.querySelectorAll('.nav-anchor').forEach(function(b){b.classList.remove('active');});
+      btn.classList.add('active');
+    }
+  });
+});
+function goTo(id){var el=document.querySelector(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}
+
+function animVal(el,from,to,dur,fmt){
+  var s=null;
+  function step(ts){
+    if(!s)s=ts;
+    var p=Math.min((ts-s)/dur,1),e=1-Math.pow(1-p,3),v=from+(to-from)*e;
+    el.textContent=fmt(v);
+    if(p<1)requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+var obsS=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      obsS.disconnect();
+      animVal(document.getElementById('s1'),0,1461,1800,function(v){return Math.round(v).toLocaleString('pt-BR');});
+      animVal(document.getElementById('s2'),0,730,1600,function(v){return Math.round(v)+'/mês';});
+      animVal(document.getElementById('s3'),0,263,1400,function(v){return Math.round(v)+' ped.';});
+    }
+  });
+},{threshold:.4});
+var st=document.querySelector('.hero-stats');
+if(st)obsS.observe(st);
+
+function showChart(id,el,c){
+  document.querySelectorAll('.chart-panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.ctab').forEach(function(t){t.classList.remove('ab','ar');});
+  var panel=document.getElementById('chart-'+id);
+  panel.classList.add('active');
+  el.classList.add(c==='b'?'ab':'ar');
+  setTimeout(function(){animBars(panel);},50);
+}
+function animBars(panel){
+  panel.querySelectorAll('.bar-fill').forEach(function(b){
+    var w=b.getAttribute('data-w');
+    b.style.width='0%';
+    setTimeout(function(){b.style.width=w+'%';},60);
+  });
+}
+document.addEventListener('DOMContentLoaded',function(){
+  var ap=document.querySelector('.chart-panel.active');
+  if(ap)setTimeout(function(){animBars(ap);},500);
+});
+
+var obs=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});
+},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(function(el){obs.observe(el);});
+</script>
+</body>
+</html>
