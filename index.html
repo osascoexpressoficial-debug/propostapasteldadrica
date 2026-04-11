@@ -37,16 +37,17 @@ section{padding:64px 0;}
 #pbar{position:fixed;top:0;left:0;height:2px;width:0;background:var(--red);z-index:999;transition:width .1s linear;}
 
 /* HERO */
-.hero{background:var(--ink);padding:72px 0 64px;position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(215,38,56,.15) 0%,transparent 65%);pointer-events:none;}
-.eyebrow-hero{font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:rgba(215,38,56,.8);margin-bottom:24px;display:flex;align-items:center;gap:10px;}
+.hero{background:var(--bone);padding:72px 0 64px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);}
+.hero::before{content:'';position:absolute;top:0;right:0;width:55%;height:100%;background:linear-gradient(135deg,transparent 40%,rgba(215,38,56,.05) 100%);pointer-events:none;}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red) 0%,transparent 60%);}
+.eyebrow-hero{font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:28px;display:flex;align-items:center;gap:10px;}
 .eyebrow-hero::before{content:'';width:20px;height:1px;background:var(--red);}
-.hero h1{font-size:clamp(32px,5.5vw,52px);color:var(--white);font-weight:900;letter-spacing:-.025em;margin-bottom:20px;max-width:520px;line-height:1.08;}
-.hero h1 em{font-style:italic;color:#ff8a94;}
-.hero-lead{font-size:15px;color:rgba(255,255,255,.55);line-height:1.8;max-width:480px;margin-bottom:36px;}
-.hero-lead strong{color:rgba(255,255,255,.85);}
+.hero h1{font-size:clamp(36px,6vw,58px);color:var(--ink);font-weight:900;letter-spacing:-.028em;margin-bottom:22px;max-width:560px;line-height:1.06;}
+.hero h1 em{font-style:italic;color:var(--red);}
+.hero-lead{font-size:15px;color:var(--ink-light);line-height:1.85;max-width:480px;margin-bottom:36px;}
+.hero-lead strong{color:var(--ink-mid);font-weight:700;}
 .hero-chips{display:flex;gap:10px;flex-wrap:wrap;}
-.chip{font-size:11px;font-weight:700;color:rgba(255,255,255,.5);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:6px 14px;border-radius:20px;}
+.chip{font-size:11px;font-weight:700;color:var(--ink-mid);background:var(--white);border:1px solid var(--border);padding:6px 14px;border-radius:20px;box-shadow:0 1px 4px rgba(0,0,0,.04);}
 
 /* EYEBROW SECTION */
 .eyebrow{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:8px;margin-bottom:14px;}
@@ -214,13 +215,14 @@ footer{background:var(--ink);padding:36px 0 24px;}
 <section class="hero">
   <div class="wrap">
     <div class="eyebrow-hero">Proposta Comercial · Osasco Express × Pastel da Drica</div>
-    <h1>A entrega do<br>seu pastel <em>começa aqui.</em></h1>
+    <h1>Você faz o pastel.<br><em>A gente entrega.</em></h1>
     <p class="hero-lead">
-      Adriana, o que estamos propondo é simples: <strong>dois entregadores dedicados, todos os dias, no seu turno.</strong> Escala confirmada, GPS ativo, suporte humano. Você foca no produto — a gente garante que ele chega.
+      Adriana, o que estamos propondo é simples: <strong>2 entregadores dedicados, todos os dias, no seu turno.</strong> Se o movimento pedir mais, a gente insere em até 72h — pelo mesmo valor, sem renegociação. Você foca no produto — a gente garante que ele chega.
     </p>
     <div class="hero-chips">
-      <span class="chip">2 entregadores/dia</span>
+      <span class="chip">2 entregadores/turno</span>
       <span class="chip">18h – 24h · todos os dias</span>
+      <span class="chip">+entregador em 72h · mesmo valor</span>
       <span class="chip">Válida por 10 dias</span>
     </div>
   </div>
@@ -253,7 +255,7 @@ footer{background:var(--ink);padding:36px 0 24px;}
           <div class="diaria-dot red"></div>
           <div>
             <div class="diaria-head-title red">Fim de semana + Feriado</div>
-            <div class="diaria-head-sub">Sexta · Sábado · Domingo</div>
+            <div class="diaria-head-sub">Sexta · Sábado · Domingo · Feriados nacionais, municipais e estaduais</div>
           </div>
         </div>
         <div class="diaria-body">
@@ -267,7 +269,7 @@ footer{background:var(--ink);padding:36px 0 24px;}
 
 
     <div class="nota-box fade-up">
-      <strong>Se precisar de mais entregadores:</strong> o valor por entregador se mantém o mesmo. Sem renegociação, sem surpresa — só acrescenta na mesma lógica.
+      <strong>Precisa de mais entregadores?</strong> Avisa com 72h de antecedência. A gente insere no turno — pelo mesmo valor da tabela, sem renegociação, sem taxa de inclusão.
     </div>
   </div>
 </section>
@@ -430,7 +432,7 @@ footer{background:var(--ink);padding:36px 0 24px;}
     </div>
 
     <div class="nota-box fade-up" style="margin-top:20px;">
-      🎁 <strong>Bônus incluso:</strong> 5 itens do seu cardápio iFood otimizados — foto, título e SEO — sem custo adicional. Entregue em até 3 dias após o fechamento.
+      🎁 <strong>Bônus incluso:</strong> 5 itens do seu cardápio iFood otimizados — foto, título e SEO — sem custo adicional. Entregue em até 3 dias úteis após assinatura e confirmação da 1ª mensalidade, mediante acesso ao painel iFood.
     </div>
   </div>
 </section>
@@ -443,7 +445,8 @@ footer{background:var(--ink);padding:36px 0 24px;}
     <h2 class="sec-title fade-up">Quando quiser<br><em>ir além.</em></h2>
 
     <div class="plus-intro fade-up">
-      O foco desta proposta são os entregadores. O que vem abaixo você contrata se e quando fizer sentido — sem pressão, sem pacote forçado. Cada serviço resolve um problema específico do iFood.
+      O foco desta proposta são os entregadores. O que vem abaixo você contrata se e quando fizer sentido — sem pressão, sem pacote forçado. Cada serviço resolve um problema específico do iFood.<br><br>
+      <strong style="color:#7a5c00;">Importante:</strong> estes serviços não fazem parte do contrato principal. Caso queira contratar qualquer um deles, formalizamos por aditivo contratual — simples, por escrito, sem burocracia.
     </div>
 
     <div class="plus-grid fade-up">
@@ -500,6 +503,11 @@ footer{background:var(--ink);padding:36px 0 24px;}
       <div class="cond-pill"><div class="cond-pill-label">Reajuste anual</div><div class="cond-pill-val">IPCA</div></div>
       <div class="cond-pill"><div class="cond-pill-label">Rescisão</div><div class="cond-pill-val">30 dias de aviso</div></div>
       <div class="cond-pill"><div class="cond-pill-label">Assinatura</div><div class="cond-pill-val">Digital · sem cartório</div></div>
+      <div class="cond-pill"><div class="cond-pill-label">Início da operação</div><div class="cond-pill-val">Até 5 dias úteis após assinatura + 1ª mensalidade</div></div>
+    </div>
+    <div class="nota-box fade-up" style="margin-top:20px; background:#fff8f0; border-color:rgba(215,100,38,.2); color:#7a3c00;">
+      <strong>Multa por rescisão antecipada:</strong> se o contrato for encerrado antes dos 12 meses sem os 30 dias de aviso, aplica-se multa de 20% sobre os meses restantes (calculada pela média dos últimos 3 fechamentos). Rescisão com aviso em dia: sem multa, sem penalidade.<br><br>
+      <strong>Não aliciamento:</strong> durante o contrato e nos 12 meses após o encerramento, fica vedada a contratação direta dos entregadores da operação — sob multa de R$ 5.000 por entregador. Isso protege a estrutura que você está contratando.
     </div>
   </div>
 </section>
